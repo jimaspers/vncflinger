@@ -38,7 +38,8 @@ AndroidDesktop::~AndroidDesktop() {
 }
 
 void AndroidDesktop::start(rfb::VNCServer* vs) {
-    mMainDpy = SurfaceComposerClient::getBuiltInDisplay(ISurfaceComposer::eDisplayIdMain);
+    //mMainDpy = SurfaceComposerClient::getBuiltInDisplay(ISurfaceComposer::eDisplayIdMain);
+    mMainDpy = SurfaceComposerClient::getInternalDisplayToken();
 
     mServer = vs;
 

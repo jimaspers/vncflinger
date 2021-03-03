@@ -33,7 +33,7 @@ LOCAL_STATIC_LIBRARIES += \
     libtigervnc
 
 LOCAL_CFLAGS := -DVNCFLINGER_VERSION="0.1"
-LOCAL_CFLAGS += -Ofast -Werror -std=c++14 -fexceptions
+LOCAL_CFLAGS += -Ofast -Werror -std=c++17 -fexceptions -Wno-implicit-fallthrough -Wno-format
 
 LOCAL_CFLAGS += -DLOG_NDEBUG=0
 #LOCAL_CXX := /usr/bin/include-what-you-use
